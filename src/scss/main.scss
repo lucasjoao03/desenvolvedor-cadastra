@@ -1,1 +1,13 @@
-@import "reset";
+
+@import 'variables';
+@import 'reset';
+
+@import 'layout';
+@import 'product-page';
+
+@import 'header';
+@import 'footer';
+@import 'buttons';
+@import 'products';
+@import 'filters';
+@import 'mobile';

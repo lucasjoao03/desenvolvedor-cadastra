@@ -1,19 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor Cadastra</title>
-  <link rel="stylesheet" href="main.css" />
+  <title>Cadastra | Teste Técnico</title>
+  
+  <link rel="stylesheet" href="main.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
+  <header class="header">
+    <div class="container">
+      <img src="./img/logo-cadastra.png" alt="Logo Cadastra" class="header__logo">
+      <div class="header__cart">
+        <img src="./img/cart.png" alt="Carrinho" class="header__cart-icon">
+        <span class="header__cart-badge">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="page-header">
+      <h1>Blusas</h1>
+      
+      <div class="mobile-controls">
+        <button class="btn-mobile-filter" id="mobile-filter-btn">Filtrar</button>
+        <button class="btn-mobile-filter" id="mobile-sort-btn">Ordenar</button>
+      </div>
+      
+      <div class="sort-options">
+        <div class="sort-dropdown" id="sort-dropdown">
+          <span class="sort-dropdown__text">Ordenar por:</span>
+          <span class="sort-dropdown__icon"></span>
+          <ul class="sort-dropdown__list" id="sort-dropdown-list">
+            <li class="sort-dropdown__item" data-value="mais-recentes">Mais recentes</li>
+            <li class="sort-dropdown__item" data-value="maior-preco">Maior preço</li>
+            <li class="sort-dropdown__item" data-value="menor-preco">Menor preço</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      
+      <aside class="filters-sidebar" id="desktop-filters">
+        <div class="filter-section">
+          <h3 class="filter-section__title">CORES</h3>
+          <div class="filter-section__content">
+            <ul class="filter-list" id="filter-colors">
+              </ul>
+            <button class="filter-section__view-more">
+              Ver todas as cores
+              <span class="icon-arrow-down"></span>
+            </button>
+          </div>
+        </div>
+        <div class="filter-section">
+          <h3 class="filter-section__title">TAMANHOS</h3>
+          <div class="filter-section__content">
+            <div class="size-filter" id="filter-sizes">
+              </div>
+          </div>
+        </div>
+        <div class="filter-section">
+          <h3 class="filter-section__title">FAIXA DE PREÇO</h3>
+          <div class="filter-section__content">
+            <ul class="filter-list" id="filter-price">
+                <li class="filter-list__item">
+                    <input type="checkbox" id="price-range-1" name="price" value="0-50" class="filter-checkbox">
+                    <label for="price-range-1" class="filter-label">de R$0 até R$50</label>
+                </li>
+                <li class="filter-list__item">
+                    <input type="checkbox" id="price-range-2" name="price" value="51-150" class="filter-checkbox">
+                    <label for="price-range-2" class="filter-label">de R$51 até R$150</label>
+                </li>
+                <li class="filter-list__item">
+                    <input type="checkbox" id="price-range-3" name="price" value="151-300" class="filter-checkbox">
+                    <label for="price-range-3" class="filter-label">de R$151 até R$300</label>
+                </li>
+                <li class="filter-list__item">
+                    <input type="checkbox" id="price-range-4" name="price" value="301-500" class="filter-checkbox">
+                    <label for="price-range-4" class="filter-label">de R$301 até R$500</label>
+                </li>
+                <li class="filter-list__item">
+                    <input type="checkbox" id="price-range-5" name="price" value="501-*" class="filter-checkbox">
+                    <label for="price-range-5" class="filter-label">a partir de R$ 500</label>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <section class="product-showcase">
+        <div id="product-grid" class="product-grid"></div>
+        <button class="btn btn--accent" id="load-more-btn">Carregar mais</button>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>CADASTRA: IMPLANTAÇÃO DE E-COMMERCE VTEX</p>
+  </footer>
+
+  <div class="overlay" id="filter-overlay">
+    <div class="overlay-header">
+      <h2>Filtrar</h2>
+      <button class="close-overlay-btn">✕</button>
+    </div>
+    <div class="overlay-content" id="mobile-filters-content"></div>
+    <div class="overlay-footer">
+      <button class="btn btn--accent" id="apply-mobile-filters-btn">Aplicar</button>
+
+      <button class="btn btn--secondary" id="clear-mobile-filters-btn">Limpar</button>
+    </div>
+  </div>
+  
+  <div class="overlay" id="sort-overlay">
+    <div class="overlay-header">
+      <h2>Ordenar</h2>
+      <button class="close-overlay-btn">✕</button>
+    </div>
+    <div class="overlay-content">
+      <ul class="sort-options-list">
+        <li><button class="sort-option-btn" data-value="mais-recentes">Mais Recente</button></li>
+        <li><button class="sort-option-btn" data-value="maior-preco">Maior Preço</button></li>
+        <li><button class="sort-option-btn" data-value="menor-preco">Menor Preço</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="bundle.js"></script>
 </body>
-<h1>Desafio Cadastra</h1>
-
-<script src="bundle.js"></script>
-
 </html>

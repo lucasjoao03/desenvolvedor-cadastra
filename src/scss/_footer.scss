@@ -1,0 +1,14 @@
+.footer {
+  background-color: #000;
+  color: $color-background;
+  text-align: center;
+  padding: $spacing-m 0;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  margin-top: $spacing-xl;
+  
+  @media (max-width: 768px) {
+    margin-top: $spacing-l;
+    padding: $spacing-s 0;
+  }
+}

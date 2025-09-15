@@ -1,0 +1,130 @@
+
+.filters-sidebar {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.filter-section {
+  padding-bottom: $spacing-l;
+  margin-bottom: $spacing-l;
+  border-bottom: 1px solid $color-border;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $color-text-gray;
+    text-transform: uppercase;
+    margin-bottom: $spacing-m;
+    letter-spacing: 0.05em;
+  }
+
+  &__view-more {
+    color: $color-text-gray;
+    font-size: $font-size-sm;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: $spacing-m;
+    display: flex;
+    align-items: center;
+    gap: $spacing-s;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+}
+
+.icon-arrow-down {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid $color-text-gray;
+  border-right: 2px solid $color-text-gray;
+  transform: rotate(45deg);
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-m;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-m;
+  }
+
+  &__item.is-hidden {
+    display: none;
+  }
+}
+
+.filter-label {
+    font-size: $font-size-sm;
+    color: $color-text-dark;
+    cursor: pointer;
+}
+
+.filter-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #6b7280;
+  background-color: $color-background;
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+  flex-shrink: 0;
+  
+  &:checked {
+    background: linear-gradient(to bottom, $color-primary 0%, $color-primary 100%);
+    background-size: 10px 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: #6b7280;
+  }
+  
+  &:hover:not(:checked) {
+    border-color: $color-primary;
+  }
+}
+
+.size-filter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-s;
+  max-width: 240px;
+}
+
+.size-btn {
+  border: 1px solid $color-border;
+  color: $color-gray-1;
+  background-color: $color-background;
+  font-weight: $font-weight-medium;
+  padding: 0.5rem 0;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-sm;
+  
+  &:hover {
+    border-color: $color-gray-2;
+  }
+  
+  &.is-selected {
+    border-color: $color-primary;
+    color: $color-gray-1;
+    font-weight: $font-weight-bold;
+  }
+}

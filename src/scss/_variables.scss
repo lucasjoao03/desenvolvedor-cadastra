@@ -1,0 +1,39 @@
+
+// --- Cores ---
+$color-black: #000000;
+$color-gray-1: #4b5563; 
+$color-gray-2: #9ca3af; 
+$color-gray-3: #d1d5db; 
+$color-gray-4: #6b7280;
+$color-gray-5: #374151; 
+$color-primary: #FB953E; 
+$color-yellow-bg: #FB953E; 
+
+// --- Mapeamento Semântico ---
+$color-accent: $color-primary;
+$color-text-dark: $color-gray-5;
+$color-text-gray: $color-gray-4;
+$color-border: $color-gray-3;
+$color-background: #FFFFFF;
+$color-page-background: #f3f4f6;
+
+// --- Tipografia ---
+$font-family-main: 'Open Sans', sans-serif;
+$font-size-xs: 11px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 24px;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// --- Espaçamento ---
+$spacing-xs: 4px;
+$spacing-s: 8px;
+$spacing-m: 16px;
+$spacing-l: 24px;
+$spacing-xl: 32px;
+
+// --- UI ---
+$border-radius: 0px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);

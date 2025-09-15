@@ -1,0 +1,32 @@
+.btn {
+  padding: $spacing-s $spacing-m;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  font-size: $font-size-sm;
+  transition: opacity 0.2s ease;
+  width: 100%;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &--primary {
+    background-color: $color-black;
+    color: $color-background;
+  }
+  &--accent {
+    background-color: $color-primary; 
+    color: $color-background;
+    border: none;
+    display: block;
+    max-width: 300px;
+    margin: $spacing-xl auto 0;
+  }
+  &--secondary {
+    background-color: transparent;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+}
